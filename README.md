@@ -45,6 +45,7 @@ IBM Verify is a mobile app for multi-factor authentication (MFA) with IBM Securi
 For more information about IBM Verify, navigate to the [user guide](http://www-01.ibm.com/support/docview.wss?uid=swg27048979).
 
 [![Download on the App Store](res/download-on-the-app-store.png)](https://itunes.apple.com/au/app/ibm-verify/id1162190392?mt=8)
+[![Get it on Google Play](res/get-it-on-google-play-store.png)](https://play.google.com/store/apps/details?id=com.ibm.security.verifyapp)
 
 <br/>
 # License
@@ -69,4 +70,8 @@ limitations under the License.
 
 ```
 These sample apps are intended solely for use with an Apple iOS product and intended to be used in conjunction with officially licensed Apple development tools and further customized and distributed under the terms and conditions of your licensed Apple developer program.
+```
+
+```
+Google Play and the Google Play logo are trademarks of Google Inc.
 ```
