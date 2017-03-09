@@ -23,7 +23,7 @@ Client secret | TheClientSecret (or blank for a public client)
 
 This sample app is intended solely for use with an Apple iOS product and intended to be used in conjunction with officially licensed Apple development tools and further customized and distributed under the terms and conditions of your licensed Apple developer program.
 
-    Copyright 2016 International Business Machines
+    Copyright 2017 International Business Machines
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
