@@ -1,15 +1,14 @@
 # Samples
 
 Here are samples demonstrating functionality of the SDK. 
-<!--(TODO: Craig: OTP iOS app)-->
 
-- [OAuth tokens](oauth)
+- [OAuth tokens](oauth/OAuthDemo)
 
-- [One-time passwords (OTP)](otp)
+<!--TODO: Craig iOS OTP app - [One-time passwords (OTP)](otp)-->
 
 - [Certificate pinning](certificate-pinning.md)
 
-- [QR code scanning](qr-code-scanning)
+- [QR code scanning](qr-code-scanning.md)
 
 <!-- "Caution" yellow indent? Not possible. Maybe regular indent? -->
 > Note that all samples depend on the SDK, ensure your development environment is configured beforehand.
