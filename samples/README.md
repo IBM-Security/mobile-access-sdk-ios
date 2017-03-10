@@ -16,6 +16,6 @@ Here are samples demonstrating functionality of the SDK.
 
 ## SDK Installation
 
-- **iOS**: Open your project folder and copy the debug framework into `Frameworks/Debug` folder and the release framework into `Frameworks/Release` folder.
-- **Android**: Open your project folder and copy the `app/libs` folder. Gradle will build the project.
+Open your project folder and copy the debug framework into `Frameworks/Debug` folder and the release framework into `Frameworks/Release` folder.
 
+For more information, see [Getting the SDK](getting-the-sdk.md#xcode-setup).

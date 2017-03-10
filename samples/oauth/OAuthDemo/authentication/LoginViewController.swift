@@ -18,6 +18,7 @@ import UIKit
 import IBMMobileKit
 import AVFoundation
 import LocalAuthentication
+import os
 
 class LoginViewController: UIViewController
 {
@@ -32,6 +33,10 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //MARK: certificate pinning
+        // If you're using a server without a valid SSL certificate, consider setting a custom trust delegate here.
+        //OAuthContext.sharedInstance.serverTrustDelegate = MyTrustDelegate()
     }
 
     override func didReceiveMemoryWarning()
@@ -41,7 +46,7 @@ class LoginViewController: UIViewController
     }
     
     // MARK: Control Events
-    @IBAction func loginClick(sender: UIButton)
+    @IBAction func loginClick(_ sender: UIButton)
     {
         let username = self.usernameTextbox.text
         let password = self.passwordTextbox.text
@@ -49,15 +54,15 @@ class LoginViewController: UIViewController
         // Check to make sure that settings have been entered.
         if(self.settingsInfo.hostName.isEmpty || self.settingsInfo.clientId.isEmpty)
         {
-            let alert = UIAlertController(title: "Settings", message: "The application settings have not been entered.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = UIAlertController(title: "Settings", message: "The application settings have not been entered.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             return
         }
         
         // Show the network actiivity
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
 
         
         OAuthContext.sharedInstance.clientSecret = self.settingsInfo.clientSecret
@@ -65,29 +70,28 @@ class LoginViewController: UIViewController
         {
             (result) -> Void in
         
-            dispatch_async(dispatch_get_main_queue(),
-            {
+            DispatchQueue.main.async(execute: {
                 if result.hasError
                 {
                     // Display an alert before deleting
-                    let alert = UIAlertController(title: "Authentication Error", message: result.errorDescription, preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Authentication Error", message: result.errorDescription, preferredStyle: .alert)
                     
                     // Add the alert actions OK and Cancel.
-                    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     
                     // present the ViewController to display the alert.
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else
                 {
-                    let alert = UIAlertController(title: "Success", message: "Here is the OAuth token.\n\(result.serializeToJson())", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    let alert = UIAlertController(title: "Success", message: "Here is the OAuth token.\n\(result.serializeToJson())", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                     
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
                 }
                 
                 // Hide the network actiivity
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 
                 return
             })
@@ -97,11 +101,11 @@ class LoginViewController: UIViewController
     // MARK: Navigation
     
     // This segue navigates to the settings view.
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "ShowSettings"
         {
-            if let destination = segue.destinationViewController as? SettingsViewController
+            if let destination = segue.destination as? SettingsViewController
             {
                 destination.settingsInfo = self.settingsInfo
             }
@@ -109,14 +113,14 @@ class LoginViewController: UIViewController
     }
     
     // This segue navigates back to the main view when cancel is clicked on settings view.
-    @IBAction func cancelFromSettingsViewController(segue:UIStoryboardSegue)
+    @IBAction func cancelFromSettingsViewController(_ segue:UIStoryboardSegue)
     {
     }
     
     // This seque navigates back to the main view when save is click on the settings view.
-    @IBAction func saveSettingsInfo(segue:UIStoryboardSegue)
+    @IBAction func saveSettingsInfo(_ segue:UIStoryboardSegue)
     {
-        if let viewController = segue.sourceViewController as? SettingsViewController
+        if let viewController = segue.source as? SettingsViewController
         {
             // Update the settingsInfo object.
             self.settingsInfo = viewController.settingsInfo!

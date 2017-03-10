@@ -3,7 +3,7 @@
 
 ### Setup
 
-Follow the **download steps** in [Getting the SDK](../../../samples/getting-the-sdk.md) and drop it into `Frameworks`. You won't need the **configuration steps**.
+Follow the **download steps** in [Getting the SDK](../../getting-the-sdk.md) and drop it into `Frameworks`. You won't need the **configuration steps**.
 
 ### App notes
 
@@ -17,7 +17,7 @@ Token URL | https://\<my isam\>/mga/sps/oauth/oauth20/token
 Client ID | MyClientId
 Client secret | TheClientSecret (or blank for a public client)
 
-
+If you're using a development machine without a valid certificate, you may wish to consult the [certificate pinning](../../certificate-pinning.md) documentation.
 
 # License
 

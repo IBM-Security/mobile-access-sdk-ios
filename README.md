@@ -1,4 +1,4 @@
-# Mobile Access SDK
+# Mobile Access SDK for iOS
 
 [![SDK Version](https://img.shields.io/badge/version-1.2.1-lightgray.svg)](https://ibm.biz/ibmsecuritymobileaccesssdk)
 ![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
@@ -7,15 +7,13 @@ This repository contains sample apps and code snippets to showcase and provide g
 
 [Looking for the Android version?](https://github.com/ibm-security/mobile-access-sdk-android)
 
-<!-- numbers: <C-V>u2460 for ①, and it adds from there -->
+<br/>
 ## ① Getting the SDK
 
-<!-- more friendly? -->
 To access the SDK you need to sign in with an IBM ID account.  Create your free [IBM ID](https://www.ibm.com/account/us-en/signup/register.html) and navigate to [Fix Central](https://ibm.biz/ibmsecuritymobileaccesssdk) to download the SDK.
 
 
 <br/>
-<!-- "set up your IDE"? -->
 ## ② Configuring your environment
 
 The SDK can be used in Xcode and Android Studio.

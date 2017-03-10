@@ -41,9 +41,9 @@ class SettingsViewController: UITableViewController, UINavigationBarDelegate
     }
     
     // MARK: Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if saveButton === sender
+        if saveButton == sender as? UIBarButtonItem
         {
             settingsInfo?.hostName = hostnameTextbox.text!
             settingsInfo?.clientId = clientIdTextbox.text!
@@ -54,8 +54,8 @@ class SettingsViewController: UITableViewController, UINavigationBarDelegate
     // MARK: Control Events
        
     // MARK: UITableViewController Functions
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-       return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+       return super.tableView(tableView, heightForRowAt: indexPath)
     }
 }

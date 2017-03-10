@@ -18,12 +18,12 @@
 
 import Foundation
 
-public class SettingsInfo
+open class SettingsInfo
 {
     // MARK: Properties
-    public var hostName: String = ""
-    public var clientId: String = ""
-    public var clientSecret: String = ""
+    open var hostName: String = ""
+    open var clientId: String = ""
+    open var clientSecret: String = ""
     
     // MARK: Initializer
     init()

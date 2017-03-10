@@ -1,5 +1,5 @@
 # Certificate pinning
-Certificate pinning is the practice of setting a custom CA or certificate as permitted in your app.
+Certificate pinning enables setting a custom CA or certificate as permitted in your app.
 
 Certificate pinning can be useful in two major cases:
 - In development: enabling self-signed certificates on development servers.
@@ -8,7 +8,7 @@ Certificate pinning can be useful in two major cases:
 Please refer to the relevant platform documentation for best practices.
 
 ## Downloading the certificate
-If you're working with a development server, this is the easiest way to download a certificate chain:
+Working with a development server, the following is the easiest way to download a certificate chain:
 ```sh
 # for DER:
 openssl s_client -connect <host>:<port> -showcerts 2>/dev/null </dev/null | openssl x509 -inform pem -outform der -out <certificate-name>.der
@@ -20,7 +20,7 @@ openssl s_client -connect <host>:<port> -showcerts 2>/dev/null </dev/null | open
 
 > Need to [download your server's certificate](README.md#downloading-the-certificate)?
 
-You just need to implement a [URLSessionDelegate](https://developer.apple.com/reference/foundation/urlsessiondelegate) and pass it to our `Context` classes.
+Implement a [URLSessionDelegate](https://developer.apple.com/reference/foundation/urlsessiondelegate) and pass it to our `Context` classes.
 
 Note that when calling the completionHandler to approve, you must pass in the `NSURLCredential`.
 
