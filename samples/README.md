@@ -19,3 +19,5 @@ Here are samples demonstrating functionality of the SDK.
 Open your project folder and copy the debug framework into `Frameworks/Debug` folder and the release framework into `Frameworks/Release` folder.
 
 For more information, see [Getting the SDK](getting-the-sdk.md#xcode-setup).
+
+Jazzydoc is available in the package there but not on this repository.
