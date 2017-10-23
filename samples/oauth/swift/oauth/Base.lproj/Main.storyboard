@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="oauth_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQr-zb-Xup">
+                                <rect key="frame" x="63" y="468" width="248" height="64"/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.47058823529999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="9Yw-tE-COu"/>
+                                    <constraint firstAttribute="height" constant="64" id="ePp-1O-DxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get OAuth Token">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onOkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLV-wC-mT5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="The-RS-nMj">
+                                <rect key="frame" x="63" y="572" width="248" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="UBI-fi-6J7"/>
+                                    <constraint firstAttribute="height" constant="64" id="r8T-t0-wcs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Refresh OAuth Token">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRefreshClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfz-ud-fi7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wkf-p1-9np">
+                                <rect key="frame" x="18" y="214" width="339" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="339" id="RuD-w7-PhM"/>
+                                    <constraint firstAttribute="height" constant="48" id="cQe-ON-GGw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jKN-Zz-LRD">
+                                <rect key="frame" x="18" y="284" width="339" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="339" id="3Ok-mW-y55"/>
+                                    <constraint firstAttribute="height" constant="48" id="EvL-0a-XuO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This example demonstrates acquiring and refreshing an OAuth token (Swift)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naD-Dd-4NY">
+                                <rect key="frame" x="16" y="57" width="343" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="1cl-TI-Xde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wkf-p1-9np" firstAttribute="top" secondItem="naD-Dd-4NY" secondAttribute="bottom" constant="50" id="3y4-yo-sq8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="The-RS-nMj" secondAttribute="bottom" constant="31" id="GVR-bp-24f"/>
+                            <constraint firstItem="wkf-p1-9np" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JFV-Tb-hAB"/>
+                            <constraint firstItem="naD-Dd-4NY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="JO9-X3-rcL"/>
+                            <constraint firstItem="The-RS-nMj" firstAttribute="top" secondItem="SQr-zb-Xup" secondAttribute="bottom" constant="39.999999999999886" id="ZKv-2V-n4z"/>
+                            <constraint firstItem="The-RS-nMj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bgE-UP-jDj"/>
+                            <constraint firstItem="jKN-Zz-LRD" firstAttribute="top" secondItem="wkf-p1-9np" secondAttribute="bottom" constant="22" id="eD3-rX-4xE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="naD-Dd-4NY" secondAttribute="leading" id="eJs-v0-9UL"/>
+                            <constraint firstItem="jKN-Zz-LRD" firstAttribute="leading" secondItem="wkf-p1-9np" secondAttribute="leading" id="fEe-NO-HBq"/>
+                            <constraint firstItem="SQr-zb-Xup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHf-N9-yce"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="naD-Dd-4NY" secondAttribute="trailing" id="wil-R9-8XK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOK" destination="SQr-zb-Xup" id="O1S-ro-7Rq"/>
+                        <outlet property="buttonRefresh" destination="The-RS-nMj" id="cKU-d7-vmR"/>
+                        <outlet property="textboxPassword" destination="jKN-Zz-LRD" id="Gpw-aD-LWp"/>
+                        <outlet property="textboxUsername" destination="wkf-p1-9np" id="Wdr-pe-Xqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>

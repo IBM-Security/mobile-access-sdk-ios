@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vfE-sG-muI">
+                                <rect key="frame" x="37" y="214" width="339" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="JUd-vw-4hU"/>
+                                    <constraint firstAttribute="width" constant="339" id="Slt-3s-6iU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU6-WC-6D2">
+                                <rect key="frame" x="83" y="494" width="248" height="64"/>
+                                <color key="backgroundColor" red="0.25490196078431371" green="0.47058823529411764" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="dHq-mf-Fpc"/>
+                                    <constraint firstAttribute="width" constant="248" id="dkd-vp-8vo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get OAuth Token">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onOkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNo-gV-Pnm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-nZ-t0U">
+                                <rect key="frame" x="37" y="284" width="339" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="b1V-ls-3Zd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrF-mQ-2OV">
+                                <rect key="frame" x="83" y="598" width="248" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="M6C-CY-oum"/>
+                                    <constraint firstAttribute="height" constant="64" id="WLb-jF-goH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Refresh OAuth Token">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRefreshClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cko-dU-zMf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This example demonstrates acquiring and refreshing an OAuth token (Objective-C)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-3H-f9k">
+                                <rect key="frame" x="29" y="57" width="356" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="C5l-xQ-w5O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.21176470588235294" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BSh-3H-f9k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="9dk-8D-yJ9"/>
+                            <constraint firstItem="BSh-3H-f9k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qA-Su-W47"/>
+                            <constraint firstItem="JrF-mQ-2OV" firstAttribute="top" secondItem="TU6-WC-6D2" secondAttribute="bottom" constant="39.999999999999886" id="AUt-EI-egt"/>
+                            <constraint firstItem="KZn-nZ-t0U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JCp-Ie-GYJ"/>
+                            <constraint firstItem="KZn-nZ-t0U" firstAttribute="leading" secondItem="vfE-sG-muI" secondAttribute="leading" id="TYK-pV-3bc"/>
+                            <constraint firstItem="JrF-mQ-2OV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" multiplier="0.9" id="UQO-R1-xjU"/>
+                            <constraint firstItem="vfE-sG-muI" firstAttribute="top" secondItem="BSh-3H-f9k" secondAttribute="bottom" constant="50" id="UgD-gX-9uk"/>
+                            <constraint firstItem="JrF-mQ-2OV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VeM-O7-kBL"/>
+                            <constraint firstItem="TU6-WC-6D2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aC4-il-HSQ"/>
+                            <constraint firstItem="vfE-sG-muI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uo1-pL-N23"/>
+                            <constraint firstItem="BSh-3H-f9k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="w3d-nd-0Js"/>
+                            <constraint firstItem="KZn-nZ-t0U" firstAttribute="top" secondItem="vfE-sG-muI" secondAttribute="bottom" constant="22" id="wDA-kn-cBC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonOK" destination="TU6-WC-6D2" id="k2p-Fa-JEC"/>
+                        <outlet property="buttonRefresh" destination="JrF-mQ-2OV" id="3QY-hd-2gw"/>
+                        <outlet property="textboxPassword" destination="KZn-nZ-t0U" id="BWv-Hr-Juy"/>
+                        <outlet property="textboxUsername" destination="vfE-sG-muI" id="Gqf-vT-3KM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="70"/>
+        </scene>
+    </scenes>
+</document>
