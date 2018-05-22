@@ -1,7 +1,7 @@
 # Mobile Access SDK for iOS
 
-[![SDK Version](https://img.shields.io/badge/version-1.2.5-lightgray.svg)](https://ibm.biz/ibmsecuritymobileaccesssdk)
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+[![SDK Version](https://img.shields.io/badge/version-1.2.9-lightgray.svg)](https://ibm.biz/ibmsecuritymobileaccesssdk)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 ![Objective-C Version](https://img.shields.io/badge/Objective--C-2.0-orange.svg)
 
 This repository contains sample apps and code snippets to showcase and provide guidance when developing mobile applications with the IBM Mobile Access SDK. The following steps will help you get started.
@@ -27,12 +27,32 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <th>Comments</th>
   </tr>
   <tr>
-    <td><a href="CHANGELOG.md#mobile-access-sdk-v127">v1.2.7 (planned)</a></td>
+    <td><a href="CHANGELOG.md#mobile-access-sdk-v129">v1.2.9</a></td>
+    <td><b>Yes (Targeted)</b></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>>9.3.0</td>
+    <td>>4.1</td>
+    <td>N/A - Last of v1.* release stream.</td>
+    <td>Tested iOS 11.</td>
+  </tr>
+  <tr>
+    <td><a href="CHANGELOG.md#mobile-access-sdk-v128">v1.2.8</a></td>
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
     <td>>9.1.0</td>
-    <td>>4.1</td>
+    <td>>4.0</td>
+    <td>13 March 2018</td>
+    <td>Tested iOS 11.</td>
+  </tr>
+  <tr>
+    <td><a href="CHANGELOG.md#mobile-access-sdk-v127">v1.2.7</a></td>
+    <td><b>Yes (Targeted)</b></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>>9.1.0</td>
+    <td>>4.0</td>
     <td>13 March 2018</td>
     <td>Tested iOS 11.</td>
   </tr>
@@ -77,6 +97,8 @@ See our [instructions for deploying your project with the SDK](samples/deploying
 <br/>
 
 ## ④ Sample apps and code snippets
+
+> NOTE: Samples are built against latest version of SDK.
 
 Available [samples](samples/README.md) and [snippets](snippets/README.md) include:
 
@@ -148,7 +170,7 @@ For more information about IBM Verify, navigate to the [user guide](http://www-0
 The Mobile Access SDK for Android will support continuous delivery for features and security vulnerabilties and defects into the latest stream. Security vulnerabilties and critical defects will be backported into Older SDK Versions. 
 _Support_ is defined as fixing of critical security vulnerabilties and defects. _Support_ does not imply new feature enhancements.
 
-| Support Statement | Latest SDK Versions (xCode 9.0) | Older SDK Versions (xCode < 9.0) |
+| Support Statement | Latest SDK Versions (Xcode 9.0) | Older SDK Versions (Xcode < 9.0) |
 |-------------------------------------------------------|-----------------|----------------|
 | Xcode updates                                         | Yes             | No             |
 | Swift updates                                         | Yes             | No             |
@@ -177,7 +199,7 @@ We do not provide external security certifications for the SDK.  IBM recommends 
 The contents of this repository are open-source under the Apache 2.0 licence. The SDK itself is closed-source.
 
 ```
-Copyright 2017 International Business Machines
+Copyright 2018 International Business Machines
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

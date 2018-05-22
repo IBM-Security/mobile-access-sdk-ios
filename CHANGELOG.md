@@ -1,11 +1,20 @@
 # Changelog iOS
 
-## Mobile Access SDK v1.2.7 (planned)
-- Support for determing biometric sensor on device from FrameworkHelper.
+## Mobile Access SDK v1.2.9
+- Added support for Hmac prefix to hash algorithms for one-time password (OTP) generation.
+- ChallengeContext.shared.pendingTransactions will return an empty PendingTransaction array if no transactions are parsed.
+- IBMMobileKitError.unauthenticated is returned when the HTTP response content-type is not JSON or the status code is a 401.
+
+## Mobile Access SDK v1.2.8
+- Face ID support for internationalisation (Czech, German, Spanish, French, Hungarian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Chinese (Simplified and Taiwan))
+
+## Mobile Access SDK v1.2.7
+- Support for Xcode 9.1.
+- Renamed sharedInstance to shared for context classes to be more consistent with iOS SDK conventions.
+- OAuthToken.createAuthorizationHeader() returns a non-optional String
+- Support for iPhone X Face ID.
+- Fixes NSLog support for encoded values.
 - Support for getting version information from FrameworkHelper.
-- Support for Swift 4.1
-- Support for Xcode 9.1
-- Support for Cloud Identity Verify (CIV) registration, enrollment and verification.
 
 ## Mobile Access SDK v1.2.6
 - Support for checking if key pair exists.

@@ -1,7 +1,7 @@
 # QR code scanning
 This example demonstrates scanning a QR code for one-time password (OTP) generation or multi-factor authentication (MMFA) with ISAM.
 <br/>
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ### Screenshots
 ![Accept camera permission](Screenshot_0.PNG)

@@ -1,11 +1,10 @@
 import UIKit
-import IBMMobileKit
 import AVFoundation
 import LocalAuthentication
+import IBMMobileKit
 
 class ViewController: UIViewController
 {
-
     // MARK: Control variables
     @IBOutlet weak var textboxUsername: UITextField!
     @IBOutlet weak var textboxPassword: UITextField!
@@ -57,7 +56,7 @@ class ViewController: UIViewController
         NSLog("Endpoint URL: \(hostname)")
         NSLog("ClientId: \(clientId)")
         
-        OAuthContext.sharedInstance.getAccessToken(hostname, clientId, username: username!, password: password!)
+        OAuthContext.shared.getAccessToken(hostname, clientId, username: username!, password: password!)
         {
             (result) -> Void in
             
@@ -110,7 +109,7 @@ class ViewController: UIViewController
         NSLog("Refresh token: \(self.token.refreshToken)")
         NSLog("Should refresh: \(self.token.shouldRefresh)")
         
-       OAuthContext.sharedInstance.refreshAccessToken(hostname, clientId, refreshToken:token.refreshToken)
+       OAuthContext.shared.refreshAccessToken(hostname, clientId, refreshToken:token.refreshToken)
        {
             (result) -> Void in
             

@@ -49,7 +49,7 @@ NSString *clientId = @"IBMVerifySDK";
     NSLog(@"Endpoint URL: %@", hostname);
     NSLog(@"ClientId: %@", clientId);
     
-    OAuthContext *context = [OAuthContext sharedInstance];
+    OAuthContext *context = [OAuthContext shared];
     
     [context getAccessToken :hostname :clientId username:username password:password completion:^(OAuthResult *result) {
         // Process callback on main UI thread to display alert.
@@ -59,7 +59,7 @@ NSString *clientId = @"IBMVerifySDK";
             {
                 alert = [UIAlertController
                          alertControllerWithTitle:@"OAuth Sample"
-                         message:result.errorDescription
+                         message:result.debugDescription
                          preferredStyle:UIAlertControllerStyleAlert];
             }
             else
@@ -109,7 +109,7 @@ NSString *clientId = @"IBMVerifySDK";
         NSLog(@"Refresh token: %@", token.refreshToken);
         NSLog(@"Should refresh: %d", token.shouldRefresh);
 
-        OAuthContext *context = [OAuthContext sharedInstance];
+        OAuthContext *context = [OAuthContext shared];
         
         [context refreshAccessToken :hostname :clientId refreshToken:token.refreshToken completion:^(OAuthResult *result) {
             

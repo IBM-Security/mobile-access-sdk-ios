@@ -78,7 +78,10 @@ class ViewController: UIViewController
                 if !success
                 {
                     alert = UIAlertController(title: "Secure Key Sample", message: "Keys not generated.", preferredStyle: .alert)
+                    return
                 }
+                
+                print("-- Public Key -- \n\(String(describing: KeychainHelper.exportPublicKey(publicKeyData!)))")
             }
         }
         
@@ -135,3 +138,4 @@ class ViewController: UIViewController
         return
     }
 }
+

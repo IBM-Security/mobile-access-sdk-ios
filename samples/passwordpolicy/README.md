@@ -1,7 +1,7 @@
 # Invoke username password policy
 This example demonstrates invoking the username password policy.
 <br/>
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ### Screenshots
 ![Enter credentials](Screenshot_0.png)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                                 <rect key="frame" x="63.5" y="469.5" width="248" height="64"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.47058823529999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="ASs-oH-MPB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="ASs-oH-MPB"/>
                                     <constraint firstAttribute="height" constant="64" id="tY7-fk-E5N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-VH-OxN">
                                 <rect key="frame" x="63.5" y="569.5" width="248" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="1Se-7e-iT5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="1Se-7e-iT5"/>
                                     <constraint firstAttribute="height" constant="64" id="uyZ-sr-ArD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="63.5" y="369.5" width="248" height="64"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.47058823529999999" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="5cc-6a-Mks"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="5cc-6a-Mks"/>
                                     <constraint firstAttribute="height" constant="64" id="jv5-bn-Lk7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -99,6 +99,7 @@
                         <constraints>
                             <constraint firstItem="dqB-Kk-Bs6" firstAttribute="top" secondItem="gHE-Gi-x8W" secondAttribute="bottom" constant="32" id="4ng-KL-Icg"/>
                             <constraint firstItem="WY9-co-2fx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5m3-5I-APx"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mea-iM-aoQ" secondAttribute="trailing" constant="20" symbolic="YES" id="9Wu-4E-hhC"/>
                             <constraint firstItem="WY9-co-2fx" firstAttribute="top" secondItem="dqB-Kk-Bs6" secondAttribute="bottom" constant="12" id="AL2-0K-iFV"/>
                             <constraint firstItem="dqB-Kk-Bs6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="2" id="CaU-JR-6hm"/>
                             <constraint firstItem="dqB-Kk-Bs6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="Ew2-O2-hcE"/>

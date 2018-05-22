@@ -1,7 +1,7 @@
 # Secure key
 This example demonstrates generating a private and public key with access control to protect access to the private key.
 <br/>
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ### Screenshots
 ![Specify the key name](Screenshot_0.PNG)

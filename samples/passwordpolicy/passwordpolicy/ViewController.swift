@@ -30,7 +30,7 @@ class ViewController: UIViewController
         textboxPassword.leftViewMode = .always;
         
         // Register the UsernamePassword challenge.  This is done to ensure that the ChallengeContext.sharedInstance.invoke parses the correct challenge.
-        ChallengeContext.sharedInstance.register(UsernamePasswordChallenge())
+        ChallengeContext.shared.register(UsernamePasswordChallenge())
     }
 
     // Dismiss the keyboard.
@@ -62,7 +62,7 @@ class ViewController: UIViewController
         NSLog("Endpoint URL: \(hostname)")
         NSLog("ClientId: \(clientId)")
         
-        OAuthContext.sharedInstance.getAccessToken(hostname, clientId, username: username!, password: password!)
+        OAuthContext.shared.getAccessToken(hostname, clientId, username: username!, password: password!)
         {
             (result) -> Void in
             
@@ -110,7 +110,7 @@ class ViewController: UIViewController
                 
                 
         // Invoke the username password policy.
-        ChallengeContext.sharedInstance.invoke(policyUri, token: token)
+        ChallengeContext.shared.invoke(policyUri, token: token)
         {
             (result) -> Void in
             
@@ -153,7 +153,7 @@ class ViewController: UIViewController
         }
         
         // Verify the challenge data collected from the dialog.
-        ChallengeContext.sharedInstance.verify(challenge.postbackUri, token: token, data: data)
+        ChallengeContext.shared.verify(challenge.postbackUri, token: token, data: data)
         {
             (result) in
             

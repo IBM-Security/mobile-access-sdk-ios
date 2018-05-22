@@ -1,7 +1,7 @@
 # OAuth token using Resource Owner Password Credentials (ROPC) grant
 This example demonstrates acquiring and refreshing an OAuth token.
 <br/>
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ### Screenshots
 ![Click Login to get OAuth token](Screenshot_0.png)
