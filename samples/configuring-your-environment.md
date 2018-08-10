@@ -10,6 +10,8 @@
 
 3\. Open the folder where the SDK was extracted in step 1.  Copy the `Framework` folder to the folder where you created the Xcode project in step 2. 
 >The `Framework` folder should be at the same folder level as the .xcodeproj file and should contain `CommonCrypto` and `IBMMobileKit.framework`.
+> 
+> **NOTE:** For v1.3.0 the `CommonCrypto` folder is no longer required.
 
 4\. In Xcode, select the top level Project item on the left.  Select the project in the `TARGETS` section.
 
@@ -42,6 +44,8 @@
 
 3\. Open the folder where the SDK was extracted in step 1.  Copy the `Framework` folder to the folder where you created the Xcode project in step 2. 
 >The `Framework` folder should be at the same folder level as the .xcodeproj file and should contain `CommonCrypto` and `IBMMobileKit.framework`.
+>
+> **NOTE:** For v1.3.0 the `CommonCrypto` folder is no longer required.
 
 4\. In Xcode, select the top level Project item on the left.  Select the project in the `TARGETS` section.
 
@@ -52,6 +56,7 @@
 7\. Click on the `Build Settings` tab along the top of the middle pane.
 
 8\. In the search field, type `Import Paths` and enter `Framework/CommonCrypto`.
+> **NOTE:** For v1.3.0 this step is no longer required.
 
 9\. Open `ViewController.swift` and add the following code snippet:
 

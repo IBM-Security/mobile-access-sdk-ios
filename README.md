@@ -4,6 +4,9 @@
 ![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 ![Objective-C Version](https://img.shields.io/badge/Objective--C-2.0-orange.svg)
 
+[![SDK Version](https://img.shields.io/badge/version-1.3.0-lightgray.svg)](https://ibm.biz/ibmsecuritymobileaccesssdk)
+![Swift Version](https://img.shields.io/badge/swift-4.2-orange.svg)
+
 This repository contains sample apps and code snippets to showcase and provide guidance when developing mobile applications with the IBM Mobile Access SDK. The following steps will help you get started.
 
 [Looking for the Android version?](https://github.com/ibm-security/mobile-access-sdk-android)
@@ -21,19 +24,32 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <th>iOS 9</th>
     <th>iOS 10</th>
     <th>iOS 11</th>
+    <th>iOS 12
     <th>Xcode</th>
     <th>Swift</th>
     <th>End of Target Build Support</th>
     <th>Comments</th>
   </tr>
   <tr>
+    <td><a href="CHANGELOG.md#mobile-access-sdk-v130">v1.3.0</a></td>
+    <td><b>Yes (Targeted)</b></td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>>10.0.0</td>
+    <td>>4.2</td>
+    <td>N/A - Last of v1.* release stream.</td>
+    <td>Tested on iOS 12 (BETA).  For access to the SDK or to report a problem with the build, use the GitHub repository <a href="https://github.com/IBM-Security/mobile-access-sdk-ios/issues">issues</a>.</td>
+  </tr>
+  <tr>
     <td><a href="CHANGELOG.md#mobile-access-sdk-v129">v1.2.9</a></td>
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
+    <td>No</td>
     <td>>9.3.0</td>
     <td>>4.1</td>
-    <td>N/A - Last of v1.* release stream.</td>
+    <td>30 September 2018.</td>
     <td>Tested iOS 11.</td>
   </tr>
   <tr>
@@ -41,6 +57,7 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
+    <td>No</td>
     <td>>9.1.0</td>
     <td>>4.0</td>
     <td>13 March 2018</td>
@@ -51,6 +68,7 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
+    <td>No</td>
     <td>>9.1.0</td>
     <td>>4.0</td>
     <td>13 March 2018</td>
@@ -61,6 +79,7 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
+    <td>No</td>
     <td>>9.0.0</td>
     <td>>3.2</td>
     <td>13 March 2018</td>
@@ -71,6 +90,7 @@ To access the SDK you need to sign in with an IBM ID account.  Create your free 
     <td><b>Yes (Targeted)</b></td>
     <td>Yes</td>
     <td>Yes</td>
+    <td>No</td>
     <td>>8.2</td>
     <td>>3.1</td>
     <td>13 March 2018</td>
@@ -98,7 +118,7 @@ See our [instructions for deploying your project with the SDK](samples/deploying
 
 ## ④ Sample apps and code snippets
 
-> NOTE: Samples are built against latest version of SDK.
+> NOTE: Samples are built against v1.2.9 of the SDK.
 
 Available [samples](samples/README.md) and [snippets](snippets/README.md) include:
 
@@ -167,7 +187,7 @@ For more information about IBM Verify, navigate to the [user guide](http://www-0
 <br/>
 
 ## Terms of Support
-The Mobile Access SDK for Android will support continuous delivery for features and security vulnerabilties and defects into the latest stream. Security vulnerabilties and critical defects will be backported into Older SDK Versions. 
+The Mobile Access SDK for iOS will support continuous delivery for features and security vulnerabilties and defects into the latest stream. Security vulnerabilties and critical defects will be backported into Older SDK Versions. 
 _Support_ is defined as fixing of critical security vulnerabilties and defects. _Support_ does not imply new feature enhancements.
 
 | Support Statement | Latest SDK Versions (Xcode 9.0) | Older SDK Versions (Xcode < 9.0) |

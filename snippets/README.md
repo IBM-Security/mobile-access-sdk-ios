@@ -19,7 +19,7 @@
     <tr>
         <td>Key pair generation</td>
         <td><a href="#keypairgen">Snippet</a></td>
-        <td>TKey pairs are used in the SDK to sign challenges, coming from IBM Security Access Manager. The private key remains on the device, whereas the public key gets uploaded to the server as part of the mechanisms enrollment.</td>
+        <td>Key pairs are used in the SDK to sign challenges, coming from IBM Security Access Manager. The private key remains on the device, whereas the public key gets uploaded to the server as part of the mechanisms enrollment.</td>
     </tr>
      <tr>
         <td>Signing data</td>
@@ -33,7 +33,7 @@ The SDK supports the ROPC grant flow.
 <br/>
 
 
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ```swift
 let hostname = "https://sdk.securitypoc.com/mga/sps/oauth/oauth20/token"
@@ -96,7 +96,7 @@ input=tmpinput && touch $input && openssl s_client -connect sdk.securitypoc.com:
 
 <br/>
 
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ```swift
 public class PinnedCertificateDelegate: NSObject, URLSessionDelegate
@@ -179,12 +179,11 @@ private func execute()
 ```
 
 
-## Key pair generation
 <h2 id="keypairgen">Key pair generation</h2>
 Key pairs are used in the SDK to sign challenges, coming from IBM Security Access Manager. The private key remains on the device, whereas the public key gets uploaded to the server as part of the mechanisms enrollment.
 <br/>
 
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 
 ```swift
@@ -232,12 +231,12 @@ KeychainHelper.deleteKeyPair("sample")
 }];
 ```
 
-## Signing data
+
 <h2 id="signdata">Signing data</h2>
 The public key would be stored on a server and provide the challenge text to the client.  The client uses the private key to sign the data which is sent back to the server. The server validates the signed data against the public key to verify the keys have not been tampered with.
 
 
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)
 
 ```swift
 // Create the private and public keys.

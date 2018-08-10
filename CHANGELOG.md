@@ -1,5 +1,9 @@
 # Changelog iOS
 
+## Mobile Access SDK v1.3.0
+- Support for Xcode 10 and Swift 4.2
+- Remove voice biometric proof of concept and associated dependencies.
+
 ## Mobile Access SDK v1.2.9
 - Added support for Hmac prefix to hash algorithms for one-time password (OTP) generation.
 - ChallengeContext.shared.pendingTransactions will return an empty PendingTransaction array if no transactions are parsed.
