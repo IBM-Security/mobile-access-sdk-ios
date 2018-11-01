@@ -1,3 +1,9 @@
+This repo is deprecated. 
+
+Please go to https://github.com/IBM-Security/verify-sdk-ios
+
+----------------
+
 # Mobile Access SDK for iOS
 
 [![SDK Version](https://img.shields.io/badge/version-1.2.9-lightgray.svg)](https://ibm.biz/ibmsecuritymobileaccesssdk)
